@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class PedidoProduto extends Model
 {
-    //campos obrigatorio para pedir um pedido
     protected $fillable = [
         'pedido_id',
         'produto_id',
@@ -14,10 +13,8 @@ class PedidoProduto extends Model
         'valor'
     ];
     
-    //cria o relacionamento com o produto
     public function produto()
     {
-        //belongs to - faz o relacionamento da foregn key com a primary key
-        return $this->belongsTo('App\Produto', 'produto_id','id');
+        return $this->belongsTo('App\Produto', 'produto_id', 'id');
     }
 }

@@ -25,9 +25,9 @@ class CreatePedidoProdutosTable extends Migration
             $table->foreign('pedido_id')->references('id')->on('pedidos');
             $table->foreign('produto_id')->references('id')->on('produtos');
             $table->foreign('cupom_desconto_id')->references('id')->on('cupom_descontos');
-
         });
     }
+
     /**
      * Reverse the migrations.
      *

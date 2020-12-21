@@ -13,10 +13,10 @@ return [
     |
     */
 
-    'password' => 'A senha deve conter no minimo seis caracteres e deve ser igual a senha de confirmação.',
+    'password' => 'A senha deve conter no mínimo seis caracteres e ser igual a de confirmação.',
     'reset' => 'Sua senha foi alterada!',
-    'sent' => 'Um link foi enviado  para seu e-mail!',
-    'token' => 'Token invalido para alterar a senha',
-    'user' => "Usuário não encontrado.",
+    'sent' => 'Nós lhe enviamos um e-mail com informações para prosseguir.',
+    'token' => 'Token inválido para alterar a senha.',
+    'user' => 'Não encontramos nenhum usuário com o e-mail informado.',
 
 ];

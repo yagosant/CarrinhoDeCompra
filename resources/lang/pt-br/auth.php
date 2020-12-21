@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'Falha ao efetuar op login. Por favor, revise seu e-mail e senha e tente novamente.',
-    'throttle' => 'Por favor, aguarde alguns segundos e tente efetuar o login novamente.',
+    'failed' => 'Falha ao efetuar o login. Por favor, revise seu email e senha e tente novamente.',
+    'throttle' => 'Falha ao efetuar o login. Por favor, aguarde alguns segundos e tente novamente.',
 
 ];

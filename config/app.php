@@ -77,7 +77,6 @@ return [
     |
     */
 
-    //verifica se já está definida  no conteudo
     'locale' => env('LOCALE', 'en'),
 
     /*

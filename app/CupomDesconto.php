@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class CupomDesconto extends Model
 {
-    //
     protected $fillable = [
         'nome',
         'localizador',
