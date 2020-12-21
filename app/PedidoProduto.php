@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class PedidoProduto extends Model
 {
+    //campos obrigatorios
     protected $fillable = [
         'pedido_id',
         'produto_id',

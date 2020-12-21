@@ -9,6 +9,7 @@ class HomeController extends Controller
 {
     public function index()
     {
+        //verifica se o produto está ativo para exibi-lo
         $registros = Produto::where([
             'ativo' => 'S'
             ])->get();

@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pedido extends Model
 {
+    //campos obrigatorios
     protected $fillable = [
         'user_id',
         'status'
@@ -21,11 +22,13 @@ class Pedido extends Model
 
     public function pedido_produtos_itens()
     {
+        //faz a validação da foreign key com a primary key
         return $this->hasMany('App\PedidoProduto');
     }
 
     public static function consultaId($where)
     {
+        //retorna um array no objeto, porem só o is será exibido
         $pedido = self::where($where)->first(['id']);
         return !empty($pedido->id) ? $pedido->id : null;
     }

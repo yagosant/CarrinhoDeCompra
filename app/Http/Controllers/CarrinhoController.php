@@ -19,7 +19,7 @@ class CarrinhoController extends Controller
 
     public function index()
     {
-
+        //salva em um objeto
         $pedidos = Pedido::where([
             'status'  => 'RE',
             'user_id' => Auth::id()
@@ -28,9 +28,10 @@ class CarrinhoController extends Controller
         return view('carrinho.index', compact('pedidos'));
     }
 
+    //metodo para adicionar
     public function adicionar()
     {
-
+        //verifica se a chave é valida de acordo com o .env
         $this->middleware('VerifyCsrfToken');
 
         $req = Request();
@@ -38,10 +39,12 @@ class CarrinhoController extends Controller
 
         $produto = Produto::find($idproduto);
         if( empty($produto->id) ) {
+            //pede dois parametros e, nome e msg
             $req->session()->flash('mensagem-falha', 'Produto não encontrado em nossa loja!');
             return redirect()->route('carrinho.index');
         }
 
+        //verifica se o usuário está logado
         $idusuario = Auth::id();
 
         $idpedido = Pedido::consultaId([
@@ -77,6 +80,7 @@ class CarrinhoController extends Controller
 
         $this->middleware('VerifyCsrfToken');
 
+        //verifica para que o sistema n apague o que não é dele
         $req = Request();
         $idpedido           = $req->input('pedido_id');
         $idproduto          = $req->input('produto_id');
