@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Pedido extends Model
 {
 
-    //campos obrigatorios para o cadastro
+    //campos obrigatorios para o cadastro de pedido
     protected $fillable = [
         'user_id',
         'status'
@@ -32,7 +32,7 @@ class Pedido extends Model
     //metodo para consultar o ID
     public static function consultaId($where)
     {
-        //retorna apenas o id do objeto
+        //retorna apenas o id do objeto, recebe um array
         $pedido = self::where($where)->first(['id']);
         return !empty($pedido->id) ? $pedido->id : null;
     }
